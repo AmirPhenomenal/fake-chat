@@ -64,7 +64,7 @@ function App() {
     // await delay(5000);
     //------------------------
     replayChat();
-    const recordDurationMS = messageList.length * 2000 + 2000;
+    const recordDurationMS = messageList.length * 2000 + 2000 + 2000;
     console.log("data : ");
     let recordedBlob = new Blob(await startRecording(recordDurationMS), {
       type: "video/webm",
@@ -91,7 +91,7 @@ function App() {
     link.click();
   };
   const saveVideo = async () => {
-    const duration = messageList.length * 2000 + 2000;
+    const duration = messageList.length * 2000 + 2000 + 2000;
     const updateIntervalMS = 1000;
     const updatePercent = (100 * updateIntervalMS) / duration;
     let timeSpent = 0;

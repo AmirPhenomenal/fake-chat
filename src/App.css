@@ -47,31 +47,32 @@
 
 .arrow {
   color: #b9bfd1;
-  font-size: 1.8rem;
-  height: 1.5em;
-  width: 1.5em;
-  margin: 0 5px;
+  font-size: 4vh;
+  height: 4vh;
+  width: 4vh;
+  margin: 0 0.7vh;
 }
 #pp {
   visibility: hidden;
   display: none;
 }
 .ppLabel {
-  height: 5px;
+  height: 5vh;
 }
 .ppImage {
   height: 5vh;
+  width: 5vh;
   border-radius: 50%;
-  /* width: 200px; */
+  object-fit: cover;
 }
 .nickname {
   width: 100%;
-  margin-left: 20px;
+  margin-left: 2vh;
   background-color: transparent;
   color: white;
   border: 0;
   height: 70%;
-  font-size: 1.5rem;
+  font-size: 3vh;
 }
 .nickname:hover {
   border: 1px solid blue;
@@ -86,9 +87,9 @@
   width: 1em;
 }
 .appBarIcons {
-  height: 30%;
+  height: 2.5vh;
   filter: brightness(0) invert(1);
-  margin: 0% 20px;
+  margin: 0% 2vh;
   transition: transform 0.3s;
 }
 .appBarLeft {
@@ -112,8 +113,8 @@
   justify-content: center;
   align-items: center;
   background-color: green;
-  height: 100%;
-  width: 55px;
+  height: 5vh;
+  width: 5vh;
   border-radius: 50%;
 }
 .chatBar {
@@ -122,8 +123,8 @@
   margin-bottom: 1vh;
 }
 .sendIcon {
-  height: 25px;
-  width: 25px;
+  height: 2.7vh;
+  width: 2.7vh;
   filter: brightness(0) invert(1);
 }
 .emojiIcon {
