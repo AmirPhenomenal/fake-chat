@@ -1,0 +1,232 @@
+@media screen and (orientation: portrait) {
+  .conntainer {
+    position: relative;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  .conntainer {
+    position: relative;
+    margin: auto;
+    height: 100vh;
+    width: calc(100vh * 0.5625);
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.statusBar {
+  background-color: #000;
+  height: 3vh;
+  display: flex;
+  justify-content: space-between;
+}
+.appBar {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatScreen {
+  background-image: url("./whatsappLight.jpg");
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.arrow {
+  color: #b9bfd1;
+  font-size: 1.8rem;
+  height: 1.5em;
+  width: 1.5em;
+  margin: 0 5px;
+}
+#pp {
+  visibility: hidden;
+  display: none;
+}
+.ppLabel {
+  height: 5px;
+}
+.ppImage {
+  height: 5vh;
+  border-radius: 50%;
+  /* width: 200px; */
+}
+.nickname {
+  width: 100%;
+  margin-left: 20px;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  height: 70%;
+  font-size: 1.5rem;
+}
+.nickname:hover {
+  border: 1px solid blue;
+}
+.nickname:focus {
+  outline: none;
+}
+.videoIcon {
+  color: #b9bfd1;
+  font-size: 1.8rem;
+  height: 1em;
+  width: 1em;
+}
+.appBarIcons {
+  height: 30%;
+  filter: brightness(0) invert(1);
+  margin: 0% 20px;
+  transition: transform 0.3s;
+}
+.appBarLeft {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+}
+.appBarRight {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+}
+.sendBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 100%;
+  width: 55px;
+  border-radius: 50%;
+}
+.chatBar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1vh;
+}
+.sendIcon {
+  height: 25px;
+  width: 25px;
+  filter: brightness(0) invert(1);
+}
+.emojiIcon {
+  filter: brightness(0) invert(1);
+  height: 70%;
+  margin-left: 10px;
+}
+.chatInput {
+  background-color: #242426;
+  border: 2px solid #000;
+  border-radius: 25px;
+  margin-left: 1.5px;
+  margin-right: 1.5px;
+
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.chatBox {
+  width: 100%;
+  height: 3vh;
+  margin-right: 10px;
+  margin-left: 20px;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+}
+.chatBox:focus {
+  outline: none;
+}
+.chatMessages {
+  height: 100%;
+
+  overflow: scroll;
+}
+.open {
+  transform: rotateZ(90deg);
+}
+
+.close {
+  transform: rotateZ(0);
+}
+
+.menu {
+  position: absolute;
+  z-index: 2;
+  background-color: #29292c;
+  height: auto;
+  width: 200px;
+  right: 0;
+  top: 10vh;
+  box-shadow: -10px -10px 30px rgba(0, 0, 0, 0.669);
+  display: none;
+}
+.showMenu {
+  animation: menuAnimation 0.2s ease-in-out;
+  display: block;
+}
+.menuItems {
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  height: 2.5vh;
+  font-size: 1.8vh;
+  color: #c9c9c9;
+  user-select: none;
+}
+.menuItems:hover {
+  background-color: #343442;
+  cursor: pointer;
+}
+@keyframes menuAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-5vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.loading {
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.loadingBar {
+  margin: 2vh 0;
+  background-color: gray;
+  height: 2vh;
+  width: 70%;
+  border-radius: 1vh;
+}
