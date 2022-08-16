@@ -1,0 +1,19 @@
+.loading {
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.loadingBar {
+  margin: 2vh 0;
+  background-color: gray;
+  height: 2vh;
+  width: 70%;
+  border-radius: 1vh;
+}

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { AppContext } from "../App";
+import { AppContext } from "../../App";
 import "./index.css";
 const ChatMessage = ({ left, text, msgId }) => {
   const { messageList, setMessageList } = useContext(AppContext);

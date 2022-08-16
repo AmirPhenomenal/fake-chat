@@ -1,0 +1,67 @@
+.chatScreen {
+  background-image: url("../../images/whatsappLight.jpg");
+  background-size: contain;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+.chatMessages {
+  height: 100%;
+
+  overflow: scroll;
+}
+.chatBar {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 1vh;
+}
+.chatInput {
+  background-color: #242426;
+  border: 0.25vh solid #000;
+  border-radius: 4vh;
+  margin-left: 1vh;
+  margin-right: 1vh;
+
+  height: 5vh;
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.emojiIcon {
+  filter: brightness(0) invert(1);
+  height: 70%;
+  margin-left: 1vh;
+}
+
+.chatBox {
+  width: 100%;
+  height: 3vh;
+  margin-right: 1vh;
+  margin-left: 1vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  background-color: transparent;
+  border: 0;
+  color: white;
+  font-size: 1rem;
+}
+.chatBox:focus {
+  outline: none;
+}
+.sendBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+}
+
+.sendIcon {
+  height: 2.7vh;
+  width: 2.7vh;
+  filter: brightness(0) invert(1);
+}

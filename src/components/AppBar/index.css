@@ -1,0 +1,80 @@
+.appBar {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+.appBarLeft {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+}
+.appBarRight {
+  background-color: #242426;
+  height: 8vh;
+  display: flex;
+
+  justify-content: start;
+  align-items: center;
+}
+
+.arrow {
+  color: #b9bfd1;
+  font-size: 4vh;
+  height: 4vh;
+  width: 4vh;
+  margin: 0 0.7vh;
+}
+#pp {
+  visibility: hidden;
+  display: none;
+}
+.ppLabel {
+  height: 5vh;
+}
+.ppImage {
+  height: 5vh;
+  width: 5vh;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.nickname {
+  width: 100%;
+  margin-left: 2vh;
+  background-color: transparent;
+  color: white;
+  border: 0;
+  height: 70%;
+  font-size: 3vh;
+}
+.nickname:hover {
+  border: 1px solid blue;
+}
+.nickname:focus {
+  outline: none;
+}
+.videoIcon {
+  color: #b9bfd1;
+  font-size: 1.8rem;
+  height: 1em;
+  width: 1em;
+}
+.appBarIcons {
+  height: 2.5vh;
+  filter: brightness(0) invert(1);
+  margin: 0% 2vh;
+  transition: transform 0.3s;
+}
+
+.open {
+  transform: rotateZ(90deg);
+}
+
+.close {
+  transform: rotateZ(0);
+}
