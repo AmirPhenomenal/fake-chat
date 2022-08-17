@@ -1,4 +1,4 @@
-import { createContext, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import "./App.css";
 
 import clock from "./images/clock.png";
@@ -13,6 +13,7 @@ import AppBar from "./components/AppBar/AppBar";
 export const AppContext = createContext();
 function App() {
   const appRef = useRef();
+  const lastMessageRef = useRef();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [messageList, setMessageList] = useState([]);
@@ -27,6 +28,10 @@ function App() {
     });
   };
 
+  useEffect(() => {
+    lastMessageRef?.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messageList]);
+
   return (
     <AppContext.Provider
       value={{
@@ -39,6 +44,7 @@ function App() {
         appRef,
         setIsMenuOpen,
         loadPercent,
+        lastMessageRef,
       }}
     >
       <div className="conntainer">

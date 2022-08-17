@@ -9,7 +9,8 @@ const ChatScreen = () => {
   //States
   const [chatInput, setChatInput] = useState("");
 
-  const { messageList, setMessageList, playBip } = useContext(AppContext);
+  const { messageList, setMessageList, playBip, lastMessageRef } =
+    useContext(AppContext);
 
   const chatInputChange = (event) => {
     setChatInput(event.target.value);
@@ -24,25 +25,18 @@ const ChatScreen = () => {
   return (
     <div className="chatScreen">
       <div className="chatMessages">
-        {messageList.map((message) => {
-          if (message.self === true) {
-            return (
-              <ChatMessage
-                text={message.text}
-                key={message.msgId}
-                msgId={message.msgId}
-              />
-            );
-          } else {
-            return (
-              <ChatMessage
-                text={message.text}
-                left
-                key={message.msgId}
-                msgId={message.msgId}
-              />
-            );
-          }
+        {messageList.map((message, index) => {
+          return (
+            <ChatMessage
+              text={message.text}
+              key={message.msgId}
+              msgId={message.msgId}
+              left={message.self !== true}
+              componentRef={
+                index === messageList.length - 1 ? lastMessageRef : ""
+              }
+            />
+          );
         })}
       </div>
 

@@ -1,6 +1,7 @@
 .chatScreen {
   background-image: url("../../images/whatsappLight.jpg");
-  background-size: contain;
+  background-size: cover;
+
   height: 89vh;
   display: flex;
   flex-direction: column;

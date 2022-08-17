@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { AppContext } from "../../App";
 import "./index.css";
-const ChatMessage = ({ left, text, msgId }) => {
+const ChatMessage = ({ left, text, msgId, componentRef }) => {
   const { messageList, setMessageList } = useContext(AppContext);
   const messageClick = (event) => {
     if (event.detail === 2) {
@@ -14,8 +14,14 @@ const ChatMessage = ({ left, text, msgId }) => {
       setMessageList(tmpMessageList);
     }
   };
+  const refProp =
+    componentRef && componentRef !== "" ? { ref: componentRef } : {};
   return (
-    <div onClick={messageClick} className={`message ${left ? "ml" : "mr"}`}>
+    <div
+      onClick={messageClick}
+      className={`message ${left && left === true ? "ml" : "mr"}`}
+      {...refProp}
+    >
       {text}
     </div>
   );
