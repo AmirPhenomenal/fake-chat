@@ -1,0 +1,29 @@
+.help {
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+.images {
+  width: 70%;
+  margin: 4vh;
+}
+.btn {
+  background-color: rgb(11, 124, 231);
+  border: 1px solid rgb(11, 124, 231);
+  padding: 1vh;
+  color: white;
+  width: 12vh;
+}
+.btn:hover {
+  background-color: rgb(26, 102, 173);
+}
+.btn:active {
+  background-color: rgb(27, 73, 116);
+}

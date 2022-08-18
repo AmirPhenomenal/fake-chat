@@ -9,6 +9,7 @@ import ChatScreen from "./components/ChatScreen/ChatScreen";
 import Loading from "./components/Loading/Loading";
 import Menu from "./components/Menu/Menu";
 import AppBar from "./components/AppBar/AppBar";
+import Help from "./components/Help/Help";
 
 export const AppContext = createContext();
 function App() {
@@ -19,6 +20,7 @@ function App() {
   const [messageList, setMessageList] = useState([]);
   const [showLoading, setShowLoading] = useState(false);
   const [loadPercent, setLoadPercent] = useState(0);
+  const [showHelp, setShowHelp] = useState(true);
 
   const playBip = () => {
     const audio = new Audio(bipSound);
@@ -45,9 +47,11 @@ function App() {
         setIsMenuOpen,
         loadPercent,
         lastMessageRef,
+        setShowHelp,
       }}
     >
       <div className="conntainer">
+        {showHelp ? <Help /> : <></>}
         {showLoading ? <Loading /> : <></>}
         <Menu />
         <div ref={appRef}>
